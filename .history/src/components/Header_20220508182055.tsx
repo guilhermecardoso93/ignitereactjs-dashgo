@@ -4,6 +4,7 @@ import {
   RiNotificationLine,
   RiSearchLine
 } from "react-icons/ri";
+import { Profile } from "./Header/Profile";
 
 export function Header() {
   return (
@@ -59,19 +60,7 @@ export function Header() {
           <Icon as={RiNotificationLine} fontSize="20" />
           <Icon as={RiUserAddLine} fontSize="20" />
         </HStack>
-        <Flex align="center">
-          <Box mr='4' textAlign='right'>
-            <Text>Guilherme Cardoso</Text>
-            <Text color="gray.300" fontSize="small">
-              guilherme_cardosogui@hotmail.com
-            </Text>
-          </Box>
-          <Avatar 
-            size='md'
-            name='Guilherme Cardoso'
-            src='https://github.com/guilhermecardoso93.png'
-          />
-        </Flex>
+       <Profile/>
       </Flex>
     </Flex>
   );
