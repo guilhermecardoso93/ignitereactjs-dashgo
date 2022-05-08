@@ -21,9 +21,9 @@ import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
-    base: false,
-    lg: true
-  });
+    base:false,
+    lg:true,
+  })
   return (
     <Box>
       <Header />
@@ -48,7 +48,7 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th px={['4', '4', "6"]} color="gray.300" w="8">
+                <Th px="6" color="gray.300" w="8">
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>Usuário</Th>
@@ -58,7 +58,7 @@ export default function UserList() {
             </Thead>
             <Tbody>
               <Tr>
-                <Td px={['4', '4', "6"]}>
+                <Td px="6">
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -69,7 +69,7 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>04 de Abril de, 2021</Td>}
+               { isWideVersion && <Td>04 de Abril de, 2021</Td>}
                 <Td>
                   <Button
                     as="a"
@@ -83,7 +83,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={['4', '4', "6"]}>
+                <Td px="6">
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -94,7 +94,7 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>04 de Abril de, 2021</Td>}
+               { isWideVersion && <Td>04 de Abril de, 2021</Td>}
                 <Td>
                   <Button
                     as="a"
@@ -108,7 +108,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={['4', '4', "6"]}>
+                <Td px="6">
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -119,7 +119,7 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>04 de Abril de, 2021</Td>}
+               { isWideVersion && <Td>04 de Abril de, 2021</Td>}
                 <Td>
                   <Button
                     as="a"
@@ -134,7 +134,7 @@ export default function UserList() {
               </Tr>
             </Tbody>
           </Table>
-          <Pagination />
+          <Pagination/>
         </Box>
       </Flex>
     </Box>

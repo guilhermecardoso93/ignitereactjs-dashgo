@@ -83,7 +83,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={['4', '4', "6"]}>
+                <Td px="6">
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -108,7 +108,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={['4', '4', "6"]}>
+                <Td px="6">
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>

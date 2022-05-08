@@ -15,6 +15,7 @@ export function Profile({ showProfileData = true }: ProfileProps) {
           </Text>
         </Box>
       )}
+
       <Avatar
         size="md"
         name="Guilherme Cardoso"
