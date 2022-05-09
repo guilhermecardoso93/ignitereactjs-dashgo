@@ -18,7 +18,7 @@ import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
-import Link from "next/link";
+import Link from 'next/link'
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -35,7 +35,7 @@ export default function UserList() {
             <Heading size="lg" fontWeight="normal">
               Usuários
             </Heading>
-            <Link href="/users/create" passHref>
+            <Link href='/users/create' passHref>
               <Button
                 as="a"
                 size="sm"
@@ -50,7 +50,7 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th px={["4", "4", "6"]} color="gray.300" w="8">
+                <Th px={['4', '4', "6"]} color="gray.300" w="8">
                   <Checkbox colorScheme="pink" />
                 </Th>
                 <Th>Usuário</Th>
@@ -60,7 +60,7 @@ export default function UserList() {
             </Thead>
             <Tbody>
               <Tr>
-                <Td px={["4", "4", "6"]}>
+                <Td px={['4', '4', "6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -85,7 +85,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={["4", "4", "6"]}>
+                <Td px={['4', '4', "6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>
@@ -110,7 +110,7 @@ export default function UserList() {
                 </Td>
               </Tr>
               <Tr>
-                <Td px={["4", "4", "6"]}>
+                <Td px={['4', '4', "6"]}>
                   <Checkbox colorScheme="pink" />
                 </Td>
                 <Td>

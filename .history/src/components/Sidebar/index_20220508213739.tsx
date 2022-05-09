@@ -16,7 +16,7 @@ export function Sidebar() {
 
   const isDrawerSidebar = useBreakpointValue({
     base: true,
-    lg: false
+    leg: false
   });
 
   if (isDrawerSidebar) {
