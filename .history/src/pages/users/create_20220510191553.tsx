@@ -106,13 +106,7 @@ export default function CreateUser() {
                   Cancelar
                 </Button>
               </Link>
-              <Button
-                type="submit"
-                colorScheme="pink"
-                isLoading={formState.isSubmitting}
-              >
-                Salvar
-              </Button>
+              <Button type='submit' colorScheme="pink" isLoading={formState.isSubmitting}>Salvar</Button>
             </HStack>
           </Flex>
         </Box>

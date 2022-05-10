@@ -94,8 +94,7 @@ export default function CreateUser() {
                 name="password_confirmation"
                 type="password"
                 label="Confirmar Senha"
-                error={errors.password_confirmation}
-                {...register("password_confirmation")}
+                {...register("password")}
               />
             </SimpleGrid>
           </VStack>
@@ -106,13 +105,7 @@ export default function CreateUser() {
                   Cancelar
                 </Button>
               </Link>
-              <Button
-                type="submit"
-                colorScheme="pink"
-                isLoading={formState.isSubmitting}
-              >
-                Salvar
-              </Button>
+              <Button colorScheme="pink">Salvar</Button>
             </HStack>
           </Flex>
         </Box>
