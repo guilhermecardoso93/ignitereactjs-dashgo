@@ -30,7 +30,9 @@ import { GetServerSideProps } from "next";
 
 export default function UserList({ users }) {
   const [page, setPage] = useState(1);
-  const { data, isLoading, error, isFetching } = useUsers(page);
+  const { data, isLoading, error, isFetching } = useUsers(page, {
+    initialData: users
+  });
 
   console.log(page);
 
@@ -121,7 +123,7 @@ export default function UserList({ users }) {
                             </Text>
                           </Box>
                         </Td>
-                        {isWideVersion && <Td>{user.createdAt}</Td>}
+                        {isWideVersion && <Td>{user.created_at}</Td>}
                         <Td>
                           <Button
                             as="a"
@@ -150,3 +152,12 @@ export default function UserList({ users }) {
     </Box>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { users, totalCount } = await getUsers(1);
+  return {
+    props: {
+      users
+    }
+  };
+};

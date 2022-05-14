@@ -5,7 +5,7 @@ interface PaginationItemProps {
   onPageChange:(page: number) => void;
 }
 
-export function PaginationItem({ isCurrent = false, number, onPageChange }: PaginationItemProps) {
+export function PaginationItem({ isCurrent = false, number }: PaginationItemProps) {
   if (isCurrent) {
     return (
       <Button
@@ -33,7 +33,6 @@ export function PaginationItem({ isCurrent = false, number, onPageChange }: Pagi
       _hover={{
         bgColor: "gray500"
       }}
-      onClick={() => onPageChange(number)}
     >
       {number}
     </Button>

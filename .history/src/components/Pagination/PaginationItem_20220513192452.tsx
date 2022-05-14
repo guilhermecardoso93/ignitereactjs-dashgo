@@ -33,7 +33,7 @@ export function PaginationItem({ isCurrent = false, number, onPageChange }: Pagi
       _hover={{
         bgColor: "gray500"
       }}
-      onClick={() => onPageChange(number)}
+      onClick={() => onPageChange}
     >
       {number}
     </Button>

@@ -1,4 +1,4 @@
-import { createServer, Factory, Model, Response } from "miragejs";
+import { createServer, Factory, Model } from "miragejs";
 import { faker } from "@faker-js/faker";
 
 type User = {
@@ -22,13 +22,13 @@ export function makeServer() {
           return faker.internet.email().toLowerCase();
         },
         createdAt() {
-          return faker.date.recent(200);
+          return faker.date.recent(10);
         }
       })
     },
 
     seeds(server) {
-      server.createList("user", 200);
+      server.createList("user", 10);
     },
 
     routes() {
@@ -40,17 +40,12 @@ export function makeServer() {
 
         const total = schema.all("user").length;
 
-        const pageStart = (Number(page) - 1) * Number(per_page);
+        const pageStart = (Number() - 1) * Number(per_page);
         const pageEnd = pageStart + Number(per_page);
 
-        const users = this.serialize(schema.all("user")).users.slice(
-          pageStart,
-          pageEnd
-        );
+        const users = this.serialize(schema.all('user')).users.slice(pageStart, pageEnd)
 
-        return new Response(200, { "x-total-count": String(total) }, { users });
       });
-      this.get("/users/:id");
       this.post("/users");
 
       this.namespace = "";
